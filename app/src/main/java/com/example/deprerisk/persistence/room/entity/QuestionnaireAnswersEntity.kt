@@ -1,11 +1,13 @@
 package com.example.deprerisk.persistence.room.entity
 
 import androidx.room.ColumnInfo
+import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.deprerisk.persistence.room.entity.QuestionnaireAnswersEntity.Companion.TABLE_NAME
 import org.jetbrains.annotations.NotNull
 
-
-data class QuestionnaireAnswers(
+@Entity(tableName = TABLE_NAME)
+data class QuestionnaireAnswersEntity(
     @ColumnInfo(name = "answers1") var answers1: String,
     @ColumnInfo(name = "answers2") var answers2: String,
     @ColumnInfo(name = "answers3") var answers3: String,
@@ -33,7 +35,7 @@ data class QuestionnaireAnswers(
     var answersId: Long = 0
 
     companion object {
-        const val TABLE_NAME = "questionnaire_answers_table"
+        const val TABLE_NAME = "answers_table"
     }
 }
 

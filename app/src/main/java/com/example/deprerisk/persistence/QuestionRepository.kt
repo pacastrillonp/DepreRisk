@@ -1,6 +1,6 @@
 package com.example.deprerisk.persistence
 
-import com.example.deprerisk.persistence.room.BeckInventoryDao
+import com.example.deprerisk.persistence.room.dao.BeckInventoryDao
 import com.example.deprerisk.persistence.room.entity.BeckInventoryEntity
 
 class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {

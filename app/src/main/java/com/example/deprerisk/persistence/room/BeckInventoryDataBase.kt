@@ -4,11 +4,18 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.deprerisk.persistence.room.dao.BeckInventoryDao
+import com.example.deprerisk.persistence.room.dao.QuestionnaireAnswersDao
 import com.example.deprerisk.persistence.room.entity.BeckInventoryEntity
+import com.example.deprerisk.persistence.room.entity.QuestionnaireAnswersEntity
 
 @Database(
     version = BeckInventoryDataBase.v01,
-    entities = [BeckInventoryEntity::class]
+    entities = [
+        BeckInventoryEntity::class,
+        QuestionnaireAnswersEntity::class
+    ]
+
 )
 
 abstract class BeckInventoryDataBase : RoomDatabase() {
@@ -39,5 +46,8 @@ abstract class BeckInventoryDataBase : RoomDatabase() {
             }
         }
     }
+
     abstract fun beckInventoryDao(): BeckInventoryDao
+    abstract fun que(): QuestionnaireAnswersDao
+//    abstract fun questionnaireAnswersDao(): QuestionnaireAnswersDao
 }

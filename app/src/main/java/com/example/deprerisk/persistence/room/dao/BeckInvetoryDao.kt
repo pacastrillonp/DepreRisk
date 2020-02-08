@@ -1,4 +1,4 @@
-package com.example.deprerisk.persistence.room
+package com.example.deprerisk.persistence.room.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
