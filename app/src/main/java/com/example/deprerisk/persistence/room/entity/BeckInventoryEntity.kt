@@ -1,9 +1,9 @@
-package com.example.deprerisk.persistence.room
+package com.example.deprerisk.persistence.room.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.deprerisk.persistence.room.BeckInventoryEntity.Companion.TABLE_NAME
+import com.example.deprerisk.persistence.room.entity.BeckInventoryEntity.Companion.TABLE_NAME
 import org.jetbrains.annotations.NotNull
 
 @Entity(tableName = TABLE_NAME)
