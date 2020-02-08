@@ -1,12 +1,15 @@
-
 package com.example.deprerisk.persistence
 
 import com.example.deprerisk.persistence.room.BeckInventoryDao
 import com.example.deprerisk.persistence.room.BeckInventoryEntity
 
-class QuestionRepository(val beckInventoryDao: BeckInventoryDao) {
+class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
 
-    fun getQuestions(): List<BeckInventoryEntity> {
+    fun insertToDB() {
+        beckInventoryDao.insertMany(questions())
+    }
+
+    private fun questions(): List<BeckInventoryEntity> {
         return listOf(
             BeckInventoryEntity(
                 "1. Tristeza",
