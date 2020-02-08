@@ -12,6 +12,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
     private fun questions(): List<BeckInventoryEntity> {
         return listOf(
             BeckInventoryEntity(
+                1,
                 "1. Tristeza",
                 "0 No me siento triste.",
                 "1 Me siento triste gran parte del tiempo",
@@ -22,6 +23,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                2,
                 "2. Pesimismo",
                 "0 No estoy desalentado respecto del mi futuro.",
                 "1 Me siento más desalentado respecto de mi futuro que lo que solía estarlo.",
@@ -32,6 +34,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                3,
                 "3. Fracaso",
                 "0 No me siento como un fracasado.",
                 "1 He fracasado más de lo que hubiera debido.",
@@ -42,6 +45,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                4,
                 "4. Pérdida de Placer",
                 "0 Obtengo tanto placer como siempre por las cosas de las que disfruto.",
                 "1 No disfruto tanto de las cosas como solía hacerlo.",
@@ -52,6 +56,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                5,
                 "5. Sentimientos de Culpa",
                 "0 No me siento particularmente culpable.",
                 "1 Me siento culpable respecto de varias cosas que he hecho o que debería haber hecho.",
@@ -62,6 +67,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                6,
                 "6. Sentimientos de Castigo",
                 "0 No siento que este siendo castigado",
                 "1 Siento que tal vez pueda ser castigado.",
@@ -72,6 +78,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                7,
                 "7. Disconformidad con uno mismo.",
                 "0 Siento acerca de mi lo mismo que siempre.",
                 "1He perdido la confianza en mí mismo.",
@@ -82,6 +89,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                8,
                 "8. Autocrítica",
                 "0 No me critico ni me culpo más de lo habitual",
                 "1 Estoy más crítico conmigo mismo de lo que solía estarlo",
@@ -92,6 +100,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                9,
                 "9. Pensamientos o Deseos Suicidas",
                 "0 No tengo ningún pensamiento de matarme.",
                 "1 He tenido pensamientos de matarme, pero no lo haría",
@@ -102,6 +111,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                10,
                 "10. Llanto",
                 "0 No lloro más de lo que solía hacerlo.",
                 "1 Lloro más de lo que solía hacerlo",
@@ -112,6 +122,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                11,
                 "11 Agitación",
                 "0 No estoy más inquieto o tenso que lo habitual.",
                 "1 Me siento más inquieto o tenso que lo habitual.",
@@ -122,6 +133,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                12,
                 "12 Pérdida de Interés",
                 "0 No he perdido el interés en otras actividades o personas.",
                 "1 Estoy menos interesado que antes en otras personas o cosas.",
@@ -132,6 +144,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                13,
                 "13. Indecisión",
                 "0 Tomo mis propias decisiones tan bien como siempre.",
                 "1 Me resulta más difícil que de costumbre tomar decisiones",
@@ -142,6 +155,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                14,
                 "14. Desvalorización",
                 "0 No siento que yo no sea valioso",
                 "1 No me considero a mi mismo tan valioso y útil como solía considerarme",
@@ -152,16 +166,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
-                "14. Desvalorización",
-                "0 No siento que yo no sea valioso",
-                "1 No me considero a mi mismo tan valioso y útil como solía considerarme",
-                "2 Me siento menos valioso cuando me comparo con otros.",
-                "3 Siento que no valgo nada.",
-                "",
-                "",
-                ""
-            ),
-            BeckInventoryEntity(
+                15,
                 "15. Pérdida de Energía",
                 "0 Tengo tanta energía como siempre.",
                 "1. Tengo menos energía que la que solía tener.",
@@ -172,6 +177,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                16,
                 "16. Cambios en los Hábitos de Sueño",
                 "0 No he experimentado ningún cambio en mis hábitos de sueño.",
                 "1a Duermo un poco más que lo habitual.",
@@ -182,6 +188,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 "3b  Me despierto 1-2 horas más temprano y no puedo volver a dormirme"
             ),
             BeckInventoryEntity(
+                17,
                 "17. Irritabilidad",
                 "0 No estoy tan irritable que lo habitual.",
                 "1 Estoy más irritable que lo habitual.",
@@ -192,6 +199,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                18,
                 "18. Cambios en el Apetito",
                 "0 No he experimentado ningún cambio en mi apetito.",
                 "1a Mi apetito es un poco menor que lo habitual.",
@@ -202,6 +210,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 "3b. Quiero comer todo el día."
             ),
             BeckInventoryEntity(
+                19,
                 "19. Dificultad de Concentración",
                 "0 Puedo concentrarme tan bien como siempre.",
                 "1 No puedo concentrarme tan bien como habitualmente",
@@ -212,6 +221,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                20,
                 "20. Cansancio o Fatiga",
                 "0 No estoy más cansado o fatigado que lo habitual.",
                 "1 Me fatigo o me canso más fácilmente que lo habitual.",
@@ -222,6 +232,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
                 ""
             ),
             BeckInventoryEntity(
+                21,
                 "21. Pérdida de Interés en el Sexo",
                 "0 No he notado ningún cambio reciente en mi interés por el sexo.",
                 "1 Estoy menos interesado en el sexo de lo que solía estarlo.",
