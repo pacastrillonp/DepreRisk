@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tx_questions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/questions"
+        android:textAlignment="center"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="30dp">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Tristeza"
+            android:textAlignment="center"
+            android:textColor="@color/primaryTextColor" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/option_button"
+                android:button="@null"
+                android:freezesText="true"
+                android:padding="10dp"
+                android:text="@string/radioButton"
+                android:textAlignment="center"
+                android:textColor="@color/primaryTextColor" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/option_button"
+                android:button="@null"
+                android:freezesText="true"
+                android:padding="10dp"
+                android:text="@string/radioButton"
+                android:textAlignment="center"
+                android:textColor="@color/primaryTextColor" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/option_button"
+                android:button="@null"
+                android:freezesText="true"
+                android:padding="10dp"
+                android:text="@string/radioButton"
+                android:textAlignment="center"
+                android:textColor="@color/primaryTextColor" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/option_button"
+                android:button="@null"
+                android:freezesText="true"
+                android:padding="10dp"
+                android:text="@string/radioButton"
+                android:textAlignment="center"
+                android:textColor="@color/primaryTextColor" />
+
+            <RadioButton
+                android:id="@+id/radioButton5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/option_button"
+                android:button="@null"
+                android:freezesText="true"
+                android:padding="10dp"
+                android:text="@string/radioButton"
+                android:textAlignment="center"
+                android:textColor="@color/primaryTextColor" />
+
+            <RadioButton
+                android:id="@+id/radioButton6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/option_button"
+                android:button="@null"
+                android:freezesText="true"
+                android:padding="10dp"
+                android:text="@string/radioButton"
+                android:textAlignment="center"
+                android:textColor="@color/primaryTextColor" />
+
+            <RadioButton
+                android:id="@+id/radioButton7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/option_button"
+                android:button="@null"
+                android:freezesText="true"
+                android:padding="10dp"
+                android:text="@string/radioButton"
+                android:textAlignment="center"
+                android:textColor="@color/primaryTextColor" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/action_button"
+                android:padding="20dp"
+                android:text="@string/next"
+                android:textColor="@color/primaryTextColor" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+    <!--<EditText-->
+    <!--android:id="@+id/editText"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="264dp"-->
+    <!--android:importantForAutofill="no"-->
+    <!--android:inputType="text"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/send"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/editText"-->
+    <!--    />-->

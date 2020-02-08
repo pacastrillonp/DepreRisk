@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DepreRisk</string>
+    <string name="send">Send</string>
+    <string name="questions">Questions</string>
+    <string name="next">Next</string>
+    <string name="radioButton">Radio Button</string>
+</resources>
