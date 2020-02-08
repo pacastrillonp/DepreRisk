@@ -3,6 +3,7 @@
 buildscript {
     ext{
         androidGradlePluginVersion = '3.5.3'
+        gsonVersion = '2.8.6'
         kotlin_version = '1.3.50'
         liviDataVersion = '2.2.0'
         archLifecycleVersion = '2.2.0'
