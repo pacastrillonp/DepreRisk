@@ -19,6 +19,9 @@ interface BeckInventoryDao {
     @Query("SELECT * FROM ${BeckInventoryEntity.TABLE_NAME}")
     fun getAllQuestions(): LiveData<List<BeckInventoryEntity>>
 
+    @Query("SELECT * FROM ${BeckInventoryEntity.TABLE_NAME} WHERE id = :id")
+    fun getQuestion(id: Int): LiveData<BeckInventoryEntity>
+
     @Query("DELETE FROM ${BeckInventoryEntity.TABLE_NAME} WHERE id = :id")
     fun delete(id: Int)
 

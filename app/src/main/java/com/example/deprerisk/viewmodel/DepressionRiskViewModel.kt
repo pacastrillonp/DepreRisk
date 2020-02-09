@@ -1,27 +1,38 @@
 package com.example.deprerisk.viewmodel
 
-import android.content.Context
+import android.app.Application
 import android.util.Log
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.viewModelScope
 import com.example.deprerisk.SendDataService
 import com.example.deprerisk.persistence.QuestionRepository
 import com.example.deprerisk.persistence.room.BeckInventoryDataBase
-import java.util.concurrent.Callable
-import java.util.concurrent.Executors
+import com.example.deprerisk.persistence.room.entity.BeckInventoryEntity
 
-class DepressionRiskViewModel() : ViewModel() {
 
-    fun insertData(context: Context) {
-        val callable = Callable {
-            val beckInventoryDataBase = BeckInventoryDataBase.getDatabase(context)
-            val questionRepository = QuestionRepository(beckInventoryDataBase.beckInventoryDao())
-            questionRepository.insertToDB()
-        }
-        Executors.newSingleThreadExecutor().submit(callable)
+class DepressionRiskViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val questionRepository: QuestionRepository
+
+    val allQuestions : LiveData<List<BeckInventoryEntity>>
+
+    init {
+        val beckInventoryDao = BeckInventoryDataBase.getDatabase(application,viewModelScope).beckInventoryDao()
+        questionRepository = QuestionRepository(beckInventoryDao)
+        allQuestions = questionRepository.allQuestions
+    }
+
+
+//    fun getAllQuestions(): LiveData<List<BeckInventoryEntity>> {
+//        return questionRepository.getAllQuestions()
+//    }
+
+    fun getQuestions(id: Int): LiveData<BeckInventoryEntity> {
+        return questionRepository.getQuestion(id)
     }
 
     private fun sendMessage() {
-//        val message = editText.text.toString()
         val message = ""
         Log.d("message", message)
         SendDataService().execute(message)
