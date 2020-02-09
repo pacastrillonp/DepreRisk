@@ -2,15 +2,13 @@ package com.example.deprerisk
 
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import com.example.deprerisk.persistence.QuestionRepository
-import com.example.deprerisk.persistence.room.BeckInventoryDataBase
+import androidx.lifecycle.ViewModelProvider
+import com.example.deprerisk.viewmodel.DepressionRiskViewModel
 
 class DepressionRiskActivity : AppCompatActivity() {
-    private lateinit var beckInventoryDataBase: BeckInventoryDataBase
-
+    private lateinit var viewModel: DepressionRiskViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,16 +16,8 @@ class DepressionRiskActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         }
-        beckInventoryDataBase = BeckInventoryDataBase.getDatabase(this)
-        val questionRepository = QuestionRepository(beckInventoryDataBase.beckInventoryDao())
-        questionRepository.insertToDB()
-//        button.setOnClickListener { sendMessage() }
-    }
+        viewModel = ViewModelProvider(this).get(DepressionRiskViewModel::class.java)
 
-    private fun sendMessage() {
-//        val message = editText.text.toString()
-        val message = ""
-        Log.d("message", message)
-        SendDataService().execute(message)
+//        button.setOnClickListener { sendMessage() }
     }
 }

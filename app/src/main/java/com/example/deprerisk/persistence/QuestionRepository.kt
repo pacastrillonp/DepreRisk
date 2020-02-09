@@ -25,7 +25,7 @@ class QuestionRepository(private val beckInventoryDao: BeckInventoryDao) {
             BeckInventoryEntity(
                 2,
                 "2. Pesimismo",
-                "0 No estoy desalentado respecto del mi futuro.",
+                "0 No estoy desalentado respecto de mi futuro.",
                 "1 Me siento más desalentado respecto de mi futuro que lo que solía estarlo.",
                 "2 No espero que las cosas funcionen para mi.",
                 "3 Siento que no hay esperanza para mi futuro y que sólo puede empeorar.",
