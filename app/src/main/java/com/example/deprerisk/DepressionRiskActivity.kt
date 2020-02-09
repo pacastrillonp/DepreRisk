@@ -17,6 +17,7 @@ class DepressionRiskActivity : AppCompatActivity() {
             window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         }
         viewModel = ViewModelProvider(this).get(DepressionRiskViewModel::class.java)
+        viewModel.insertData(this)
 
 //        button.setOnClickListener { sendMessage() }
     }
