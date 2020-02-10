@@ -9,11 +9,10 @@
     tools:context=".DepressionRiskActivity">
 
     <TextView
-        android:id="@+id/tx_questions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/questions"
+        android:text="@string/beck_depression"
         android:textAlignment="center"
         android:textColor="@color/primaryTextColor"
         android:textSize="30sp"
@@ -26,10 +25,10 @@
         android:paddingTop="30dp">
 
         <TextView
+            android:id="@+id/tx_questions"
             style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1. Tristeza"
             android:textAlignment="center"
             android:textColor="@color/primaryTextColor" />
 
@@ -102,7 +101,8 @@
                 android:padding="10dp"
                 android:text="@string/radioButton"
                 android:textAlignment="center"
-                android:textColor="@color/primaryTextColor" />
+                android:textColor="@color/primaryTextColor"
+                android:visibility="gone" />
 
             <RadioButton
                 android:id="@+id/radioButton6"
@@ -115,7 +115,8 @@
                 android:padding="10dp"
                 android:text="@string/radioButton"
                 android:textAlignment="center"
-                android:textColor="@color/primaryTextColor" />
+                android:textColor="@color/primaryTextColor"
+                android:visibility="gone" />
 
             <RadioButton
                 android:id="@+id/radioButton7"
@@ -128,7 +129,8 @@
                 android:padding="10dp"
                 android:text="@string/radioButton"
                 android:textAlignment="center"
-                android:textColor="@color/primaryTextColor" />
+                android:textColor="@color/primaryTextColor"
+                android:visibility="gone" />
 
         </RadioGroup>
 
@@ -153,25 +155,3 @@
 </LinearLayout>
 
 
-    <!--<EditText-->
-    <!--android:id="@+id/editText"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginTop="264dp"-->
-    <!--android:importantForAutofill="no"-->
-    <!--android:inputType="text"-->
-    <!--app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--app:layout_constraintEnd_toEndOf="parent"-->
-    <!--app:layout_constraintStart_toStartOf="parent"-->
-    <!--app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--<Button-->
-    <!--android:id="@+id/button"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="@string/send"-->
-    <!--app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--app:layout_constraintEnd_toEndOf="parent"-->
-    <!--app:layout_constraintStart_toStartOf="parent"-->
-    <!--app:layout_constraintTop_toBottomOf="@+id/editText"-->
-    <!--    />-->
