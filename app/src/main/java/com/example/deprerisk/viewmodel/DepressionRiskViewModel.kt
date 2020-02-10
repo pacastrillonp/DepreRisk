@@ -1,7 +1,6 @@
 package com.example.deprerisk.viewmodel
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
@@ -34,10 +33,13 @@ class DepressionRiskViewModel(application: Application) : AndroidViewModel(appli
 
     fun finishQuestionnaire() = questionRepository.getAnswers()
 
+    fun deleteAnswers(){
+        questionRepository.deleteAnswers()
+    }
+
 
     fun sendMessage(answers: List<QuestionnaireAnswersEntity>) {
         val message = Gson().toJson(answers)
-        Log.d("message send ", message)
         SendDataService().execute(message)
     }
 }

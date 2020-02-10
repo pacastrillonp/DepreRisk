@@ -2,7 +2,6 @@ package com.example.deprerisk
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.os.Build
 import android.os.Bundle
 import android.view.View
@@ -75,6 +74,8 @@ class DepressionRiskActivity : AppCompatActivity() {
             .setTitle("Cuetionario Finalizado")
             .setMessage("Sus respuestas estan siendo valoradas")
             .setPositiveButton(android.R.string.yes) { dialog, which ->
+                viewModel.deleteAnswers()
+
             }
             .setNegativeButton(android.R.string.no, null)
             .setIcon(android.R.drawable.ic_dialog_alert)

@@ -23,6 +23,12 @@ class QuestionRepository(
     fun getAnswers(): LiveData<List<QuestionnaireAnswersEntity>> {
         return questionnaireAnswersDao.getAllAnswers()
     }
+
+    fun deleteAnswers() {
+        AsyncTask.execute {
+            questionnaireAnswersDao.deleteAll()
+        }
+    }
 }
 
 
