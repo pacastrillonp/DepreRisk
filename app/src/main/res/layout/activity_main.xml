@@ -72,9 +72,6 @@
                 android:freezesText="true"
                 android:elevation="8dp"
                 android:padding="8dp"
-                android:drawableStart="@drawable/ic_uno"
-                android:drawableLeft="@drawable/ic_uno"
-                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
                 android:textColor="@drawable/radio_text_color" />
 
@@ -88,9 +85,6 @@
                 android:freezesText="true"
                 android:elevation="8dp"
                 android:padding="8dp"
-                android:drawableStart="@drawable/ic_dos"
-                android:drawableLeft="@drawable/ic_dos"
-                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
                 android:textColor="@drawable/radio_text_color" />
 
@@ -104,9 +98,6 @@
                 android:freezesText="true"
                 android:elevation="8dp"
                 android:padding="8dp"
-                android:drawableStart="@drawable/ic_tres"
-                android:drawableLeft="@drawable/ic_tres"
-                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
                 android:textColor="@drawable/radio_text_color" />
 
@@ -120,9 +111,6 @@
                 android:freezesText="true"
                 android:elevation="8dp"
                 android:padding="8dp"
-                android:drawableStart="@drawable/ic_cuatro"
-                android:drawableLeft="@drawable/ic_cuatro"
-                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
                 android:textColor="@drawable/radio_text_color" />
 
@@ -136,9 +124,6 @@
                 android:freezesText="true"
                 android:elevation="8dp"
                 android:padding="8dp"
-                android:drawableStart="@drawable/ic_cinco"
-                android:drawableLeft="@drawable/ic_cinco"
-                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
                 android:textColor="@drawable/radio_text_color"
                 android:visibility="visible" />
@@ -153,9 +138,6 @@
                 android:freezesText="true"
                 android:elevation="8dp"
                 android:padding="8dp"
-                android:drawableStart="@drawable/ic_seis"
-                android:drawableLeft="@drawable/ic_seis"
-                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
                 android:textColor="@drawable/radio_text_color"
                 android:visibility="visible" />
@@ -170,9 +152,6 @@
                 android:freezesText="true"
                 android:elevation="8dp"
                 android:padding="8dp"
-                android:drawableStart="@drawable/ic_siete"
-                android:drawableLeft="@drawable/ic_siete"
-                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
                 android:textColor="@drawable/radio_text_color"
                 android:visibility="visible" />
