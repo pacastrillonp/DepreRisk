@@ -6,7 +6,6 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
-import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -41,9 +40,11 @@ class DepressionRiskActivity : AppCompatActivity() {
                 index++
             }
         })
-        radio_group.setOnCheckedChangeListener { group, checkedId ->
-            val radioButton = group.findViewById(checkedId) as RadioButton
-            checkRadioButtons(radioButton)
+
+        activateButton(false)
+
+        radioGroup.setOnCheckedChangeListener { group, checkedId ->
+            checkRadioButtons(checkedId)
         }
 
         //Next Button
@@ -113,145 +114,32 @@ class DepressionRiskActivity : AppCompatActivity() {
         }
     }
 
-    private fun checkRadioButtons(radioButton: RadioButton) {
-        when {
-            radioButton1 == radioButton -> {
-                answer = radioButton1.text.toString()
-                radioButton1.setBackgroundResource(R.drawable.option_button_selected)
-                radioButton1.isChecked = true
-                radioButton2.setBackgroundResource(R.drawable.action_button)
-                radioButton2.isChecked = false
-                radioButton3.setBackgroundResource(R.drawable.action_button)
-                radioButton3.isChecked = false
-                radioButton4.setBackgroundResource(R.drawable.action_button)
-                radioButton4.isChecked = false
-                radioButton5.setBackgroundResource(R.drawable.action_button)
-                radioButton5.isChecked = false
-                radioButton6.setBackgroundResource(R.drawable.action_button)
-                radioButton6.isChecked = false
-                radioButton7.setBackgroundResource(R.drawable.action_button)
-                radioButton7.isChecked = false
-            }
-            radioButton2 == radioButton -> {
-                answer = radioButton2.text.toString()
-                radioButton2.setBackgroundResource(R.drawable.option_button_selected)
-                radioButton2.isChecked = true
-                radioButton1.setBackgroundResource(R.drawable.action_button)
-                radioButton1.isChecked = false
-                radioButton3.setBackgroundResource(R.drawable.action_button)
-                radioButton3.isChecked = false
-                radioButton4.setBackgroundResource(R.drawable.action_button)
-                radioButton4.isChecked = false
-                radioButton5.setBackgroundResource(R.drawable.action_button)
-                radioButton5.isChecked = false
-                radioButton6.setBackgroundResource(R.drawable.action_button)
-                radioButton6.isChecked = false
-                radioButton7.setBackgroundResource(R.drawable.action_button)
-                radioButton7.isChecked = false
-            }
-            radioButton3 == radioButton -> {
-                answer = radioButton3.text.toString()
-                radioButton3.setBackgroundResource(R.drawable.option_button_selected)
-                radioButton3.isChecked = true
-                radioButton1.setBackgroundResource(R.drawable.action_button)
-                radioButton1.isChecked = false
-                radioButton2.setBackgroundResource(R.drawable.action_button)
-                radioButton2.isChecked = false
-                radioButton4.setBackgroundResource(R.drawable.action_button)
-                radioButton4.isChecked = false
-                radioButton5.setBackgroundResource(R.drawable.action_button)
-                radioButton5.isChecked = false
-                radioButton6.setBackgroundResource(R.drawable.action_button)
-                radioButton6.isChecked = false
-                radioButton7.setBackgroundResource(R.drawable.action_button)
-                radioButton7.isChecked = false
-            }
-            radioButton4 == radioButton -> {
-                answer = radioButton4.text.toString()
-                radioButton4.setBackgroundResource(R.drawable.option_button_selected)
-                radioButton4.isChecked = true
-                radioButton1.setBackgroundResource(R.drawable.action_button)
-                radioButton1.isChecked = false
-                radioButton2.setBackgroundResource(R.drawable.action_button)
-                radioButton2.isChecked = false
-                radioButton3.setBackgroundResource(R.drawable.action_button)
-                radioButton3.isChecked = false
-                radioButton5.setBackgroundResource(R.drawable.action_button)
-                radioButton5.isChecked = false
-                radioButton6.setBackgroundResource(R.drawable.action_button)
-                radioButton6.isChecked = false
-                radioButton7.setBackgroundResource(R.drawable.action_button)
-                radioButton7.isChecked = false
-            }
-            radioButton5 == radioButton -> {
-                answer = radioButton5.text.toString()
-                radioButton5.setBackgroundResource(R.drawable.option_button_selected)
-                radioButton5.isChecked = true
-                radioButton1.setBackgroundResource(R.drawable.action_button)
-                radioButton1.isChecked = false
-                radioButton2.setBackgroundResource(R.drawable.action_button)
-                radioButton2.isChecked = false
-                radioButton3.setBackgroundResource(R.drawable.action_button)
-                radioButton3.isChecked = false
-                radioButton4.setBackgroundResource(R.drawable.action_button)
-                radioButton4.isChecked = false
-                radioButton6.setBackgroundResource(R.drawable.action_button)
-                radioButton6.isChecked = false
-                radioButton7.setBackgroundResource(R.drawable.action_button)
-                radioButton7.isChecked = false
-            }
-            radioButton6 == radioButton -> {
-                answer = radioButton6.text.toString()
-                radioButton6.setBackgroundResource(R.drawable.option_button_selected)
-                radioButton6.isChecked = true
-                radioButton1.setBackgroundResource(R.drawable.action_button)
-                radioButton1.isChecked = false
-                radioButton2.setBackgroundResource(R.drawable.action_button)
-                radioButton2.isChecked = false
-                radioButton3.setBackgroundResource(R.drawable.action_button)
-                radioButton3.isChecked = false
-                radioButton4.setBackgroundResource(R.drawable.action_button)
-                radioButton4.isChecked = false
-                radioButton5.setBackgroundResource(R.drawable.action_button)
-                radioButton5.isChecked = false
-                radioButton7.setBackgroundResource(R.drawable.action_button)
-                radioButton7.isChecked = false
-            }
-            radioButton7 == radioButton -> {
-                answer = radioButton7.text.toString()
-                radioButton7.setBackgroundResource(R.drawable.option_button_selected)
-                radioButton7.isChecked = true
-                radioButton1.setBackgroundResource(R.drawable.action_button)
-                radioButton1.isChecked = false
-                radioButton2.setBackgroundResource(R.drawable.action_button)
-                radioButton2.isChecked = false
-                radioButton3.setBackgroundResource(R.drawable.action_button)
-                radioButton3.isChecked = false
-                radioButton4.setBackgroundResource(R.drawable.action_button)
-                radioButton4.isChecked = false
-                radioButton5.setBackgroundResource(R.drawable.action_button)
-                radioButton5.isChecked = false
-                radioButton6.setBackgroundResource(R.drawable.action_button)
-                radioButton6.isChecked = false
-            }
+    private fun checkRadioButtons(checkId: Int) {
+        answer = when (checkId) {
+            R.id.radioButton1 -> radioButton1.text.toString()
+            R.id.radioButton2 -> radioButton2.text.toString()
+            R.id.radioButton3 -> radioButton3.text.toString()
+            R.id.radioButton4 -> radioButton4.text.toString()
+            R.id.radioButton5 -> radioButton5.text.toString()
+            R.id.radioButton6 -> radioButton6.text.toString()
+            R.id.radioButton7 -> radioButton7.text.toString()
+            else -> ""
         }
+        activateButton(answer.isNotEmpty())
     }
 
     private fun clearFields() {
-        radioButton1.setBackgroundResource(R.drawable.action_button)
-        radioButton2.setBackgroundResource(R.drawable.action_button)
-        radioButton3.setBackgroundResource(R.drawable.action_button)
-        radioButton4.setBackgroundResource(R.drawable.action_button)
-        radioButton5.setBackgroundResource(R.drawable.action_button)
-        radioButton6.setBackgroundResource(R.drawable.action_button)
-        radioButton7.setBackgroundResource(R.drawable.action_button)
-        radioButton1.isChecked = false
-        radioButton2.isChecked = false
-        radioButton3.isChecked = false
-        radioButton4.isChecked = false
-        radioButton5.isChecked = false
-        radioButton6.isChecked = false
-        radioButton7.isChecked = false
+        radioGroup.clearCheck()
+        activateButton(false)
+    }
+
+    private fun activateButton(active: Boolean) {
+        next_button.isClickable = active
+        next_button.alpha = if (active) {
+            1f
+        } else {
+            0.5f
+        }
     }
 
 }
