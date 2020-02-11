@@ -1,157 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primaryColor"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
     tools:context=".DepressionRiskActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textView"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:text="@string/beck_depression"
         android:textAlignment="center"
         android:textColor="@color/primaryTextColor"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tx_questions"
+        style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="30dp">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:textAlignment="center"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:text="Question" />
 
-        <TextView
-            android:id="@+id/tx_questions"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textColor="@color/primaryTextColor" />
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/next_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_questions">
 
         <RadioGroup
-            android:id="@+id/radio_group"
+            android:id="@+id/radioGroup"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp">
+            android:layout_height="wrap_content">
 
             <RadioButton
                 android:id="@+id/radioButton1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:background="@drawable/option_button"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/radio_background"
                 android:button="@null"
                 android:freezesText="true"
-                android:padding="10dp"
+                android:elevation="8dp"
+                android:padding="8dp"
+                android:drawableStart="@drawable/ic_uno"
+                android:drawableLeft="@drawable/ic_uno"
+                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
-                android:textAlignment="center"
-                android:textColor="@color/primaryTextColor" />
+                android:textColor="@drawable/radio_text_color" />
 
             <RadioButton
                 android:id="@+id/radioButton2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:background="@drawable/option_button"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/radio_background"
                 android:button="@null"
                 android:freezesText="true"
-                android:padding="10dp"
+                android:elevation="8dp"
+                android:padding="8dp"
+                android:drawableStart="@drawable/ic_dos"
+                android:drawableLeft="@drawable/ic_dos"
+                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
-                android:textAlignment="center"
-                android:textColor="@color/primaryTextColor" />
+                android:textColor="@drawable/radio_text_color" />
 
             <RadioButton
                 android:id="@+id/radioButton3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:background="@drawable/option_button"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/radio_background"
                 android:button="@null"
                 android:freezesText="true"
-                android:padding="10dp"
+                android:elevation="8dp"
+                android:padding="8dp"
+                android:drawableStart="@drawable/ic_tres"
+                android:drawableLeft="@drawable/ic_tres"
+                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
-                android:textAlignment="center"
-                android:textColor="@color/primaryTextColor" />
+                android:textColor="@drawable/radio_text_color" />
 
             <RadioButton
                 android:id="@+id/radioButton4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:background="@drawable/option_button"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/radio_background"
                 android:button="@null"
                 android:freezesText="true"
-                android:padding="10dp"
+                android:elevation="8dp"
+                android:padding="8dp"
+                android:drawableStart="@drawable/ic_cuatro"
+                android:drawableLeft="@drawable/ic_cuatro"
+                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
-                android:textAlignment="center"
-                android:textColor="@color/primaryTextColor" />
+                android:textColor="@drawable/radio_text_color" />
 
             <RadioButton
                 android:id="@+id/radioButton5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:background="@drawable/option_button"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/radio_background"
                 android:button="@null"
                 android:freezesText="true"
-                android:padding="10dp"
+                android:elevation="8dp"
+                android:padding="8dp"
+                android:drawableStart="@drawable/ic_cinco"
+                android:drawableLeft="@drawable/ic_cinco"
+                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
-                android:textAlignment="center"
-                android:textColor="@color/primaryTextColor"
-                android:visibility="gone" />
+                android:textColor="@drawable/radio_text_color"
+                android:visibility="visible" />
 
             <RadioButton
                 android:id="@+id/radioButton6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:background="@drawable/option_button"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/radio_background"
                 android:button="@null"
                 android:freezesText="true"
-                android:padding="10dp"
+                android:elevation="8dp"
+                android:padding="8dp"
+                android:drawableStart="@drawable/ic_seis"
+                android:drawableLeft="@drawable/ic_seis"
+                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
-                android:textAlignment="center"
-                android:textColor="@color/primaryTextColor"
-                android:visibility="gone" />
+                android:textColor="@drawable/radio_text_color"
+                android:visibility="visible" />
 
             <RadioButton
                 android:id="@+id/radioButton7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:background="@drawable/option_button"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/radio_background"
                 android:button="@null"
                 android:freezesText="true"
-                android:padding="10dp"
+                android:elevation="8dp"
+                android:padding="8dp"
+                android:drawableStart="@drawable/ic_siete"
+                android:drawableLeft="@drawable/ic_siete"
+                android:drawablePadding="8dp"
                 android:text="@string/radioButton"
-                android:textAlignment="center"
-                android:textColor="@color/primaryTextColor"
-                android:visibility="gone" />
+                android:textColor="@drawable/radio_text_color"
+                android:visibility="visible" />
 
         </RadioGroup>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="20dp">
+    </ScrollView>
 
-            <Button
-                android:id="@+id/next_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/action_button"
-                android:padding="20dp"
-                android:text="@string/next"
-                android:textColor="@color/primaryTextColor" />
-        </LinearLayout>
-    </LinearLayout>
+    <Button
+        android:id="@+id/next_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
