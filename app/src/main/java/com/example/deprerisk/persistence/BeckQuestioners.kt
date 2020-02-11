@@ -3,13 +3,13 @@ package com.example.deprerisk.persistence
 import com.example.deprerisk.persistence.room.entity.BeckInventoryEntity
 
 class BeckQuestioners {
-     fun questions(): List<BeckInventoryEntity> {
+    fun questions(): List<BeckInventoryEntity> {
         return listOf(
             BeckInventoryEntity(
                 1,
                 "1. Tristeza",
                 "No me siento triste.",
-                "Me siento triste gran parte del tiempo",
+                "Me siento triste gran parte del tiempo.",
                 "Me siento triste todo el tiempo.",
                 "Me siento tan triste o soy tan infeliz que no puedo soportarlo.",
                 "",
@@ -63,10 +63,10 @@ class BeckQuestioners {
             BeckInventoryEntity(
                 6,
                 "6. Sentimientos de Castigo",
-                "0 No siento que este siendo castigado",
-                "1 Siento que tal vez pueda ser castigado.",
-                "2 Espero ser castigado.",
-                "3 Siento que estoy siendo castigado.",
+                "No siento que este siendo castigado",
+                "Siento que tal vez pueda ser castigado.",
+                "Espero ser castigado.",
+                "Siento que estoy siendo castigado.",
                 "",
                 "",
                 ""
@@ -118,10 +118,10 @@ class BeckQuestioners {
             BeckInventoryEntity(
                 11,
                 "11. Agitación",
-                "0 No estoy más inquieto o tenso que lo habitual.",
-                "1 Me siento más inquieto o tenso que lo habitual.",
-                "2 Estoy tan inquieto o agitado que me es difícil quedarme quieto",
-                "3 Estoy tan inquieto o agitado que tengo que estar siempre en movimiento o haciendo algo.",
+                "No estoy más inquieto o tenso que lo habitual.",
+                "Me siento más inquieto o tenso que lo habitual.",
+                "Estoy tan inquieto o agitado que me es difícil quedarme quieto",
+                "Estoy tan inquieto o agitado que tengo que estar siempre en movimiento o haciendo algo.",
                 "",
                 "",
                 ""
@@ -173,13 +173,13 @@ class BeckQuestioners {
             BeckInventoryEntity(
                 16,
                 "16. Cambios en los Hábitos de Sueño",
-                "0 No he experimentado ningún cambio en mis hábitos de sueño.",
-                "1a Duermo un poco más que lo habitual.",
-                "1b Duermo un poco menos que lo habitual.",
-                "2a Duermo mucho más que lo habitual.",
-                "2b Duermo mucho menos que lo habitual",
-                "3a Duermo la mayor parte del día",
-                "3b  Me despierto 1-2 horas más temprano y no puedo volver a dormirme"
+                "No he experimentado ningún cambio en mis hábitos de sueño.",
+                "Duermo un poco más que lo habitual.",
+                "Duermo un poco menos que lo habitual.",
+                "Duermo mucho más que lo habitual.",
+                "Duermo mucho menos que lo habitual",
+                "Duermo la mayor parte del día",
+                "Me despierto 1-2 horas más temprano y no puedo volver a dormirme"
             ),
             BeckInventoryEntity(
                 17,
@@ -195,13 +195,13 @@ class BeckQuestioners {
             BeckInventoryEntity(
                 18,
                 "18. Cambios en el Apetito",
-                "0 No he experimentado ningún cambio en mi apetito.",
-                "1a Mi apetito es un poco menor que lo habitual.",
-                "1b Mi apetito es un poco mayor que lo habitual.",
-                "2a Mi apetito es mucho menor que antes.",
-                "2b Mi apetito es mucho mayor que lo habitual",
-                "3a No tengo apetito en absoluto.",
-                "3b. Quiero comer todo el día."
+                "No he experimentado ningún cambio en mi apetito.",
+                "Mi apetito es un poco menor que lo habitual.",
+                "Mi apetito es un poco mayor que lo habitual.",
+                "Mi apetito es mucho menor que antes.",
+                "Mi apetito es mucho mayor que lo habitual",
+                "No tengo apetito en absoluto.",
+                "Quiero comer todo el día."
             ),
             BeckInventoryEntity(
                 19,
@@ -238,4 +238,112 @@ class BeckQuestioners {
             )
         )
     }
+
+    fun answerScore(): List<Pair<String, Int>> {
+        return listOf(
+            Pair("No me siento triste.", 0),
+            Pair("Me siento triste gran parte del tiempo.", 1),
+            Pair("Me siento triste todo el tiempo.", 2),
+            Pair("Me siento tan triste o soy tan infeliz que no puedo soportarlo.", 3),
+            Pair("No estoy desalentado respecto de mi futuro.", 0),
+            Pair("Me siento más desalentado respecto de mi futuro que lo que solía estarlo.", 1),
+            Pair("No espero que las cosas funcionen para mi.", 2),
+            Pair("Siento que no hay esperanza para mi futuro y que sólo puede empeorar.", 3),
+            Pair("No me siento como un fracasado.", 0),
+            Pair("He fracasado más de lo que hubiera debido.", 1),
+            Pair("Cuando miro hacia atrás, veo muchos fracasos.", 2),
+            Pair("Siento que como persona soy un fracaso total.", 3),
+            Pair("Obtengo tanto placer como siempre por las cosas de las que disfruto.", 0),
+            Pair("No disfruto tanto de las cosas como solía hacerlo.", 1),
+            Pair("Obtengo muy poco placer de las cosas que solía disfrutar.", 2),
+            Pair("No puedo obtener ningún placer de las cosas de las que solía disfrutar.", 3),
+            Pair("No me siento particularmente culpable.", 0),
+            Pair(
+                "Me siento culpable respecto de varias cosas que he hecho o que debería haber hecho.",
+                1
+            ),
+            Pair("Me siento bastante culpable la mayor parte del tiempo.", 2),
+            Pair("Me siento culpable todo el tiempo.", 3),
+            Pair("No siento que este siendo castigado", 0),
+            Pair("Siento que tal vez pueda ser castigado.", 1),
+            Pair("Espero ser castigado.", 2),
+            Pair("Siento que estoy siendo castigado.", 3),
+            Pair("Siento acerca de mi lo mismo que siempre.", 0),
+            Pair("He perdido la confianza en mí mismo.", 1),
+            Pair("Estoy decepcionado conmigo mismo.", 2),
+            Pair("No me gusto a mí mismo.", 3),
+            Pair("No me critico ni me culpo más de lo habitual", 0),
+            Pair("Estoy más crítico conmigo mismo de lo que solía estarlo", 1),
+            Pair("Me critico a mí mismo por todos mis errores", 2),
+            Pair("Me culpo a mí mismo por todo lo malo que sucede.", 3),
+            Pair("No tengo ningún pensamiento de matarme.", 0),
+            Pair("He tenido pensamientos de matarme, pero no lo haría", 1),
+            Pair("Querría matarme", 2),
+            Pair("Me mataría si tuviera la oportunidad de hacerlo.", 3),
+            Pair("No lloro más de lo que solía hacerlo.", 0),
+            Pair("Lloro más de lo que solía hacerlo", 1),
+            Pair("Lloro por cualquier pequeñez.", 2),
+            Pair("Siento ganas de llorar pero no puedo.", 3),
+            Pair("No estoy más inquieto o tenso que lo habitual.", 0),
+            Pair("Me siento más inquieto o tenso que lo habitual.", 1),
+            Pair("Estoy tan inquieto o agitado que me es difícil quedarme quieto", 2),
+            Pair(
+                "Estoy tan inquieto o agitado que tengo que estar siempre en movimiento o haciendo algo.",
+                3
+            ),
+            Pair("No he perdido el interés en otras actividades o personas.", 0),
+            Pair("Estoy menos interesado que antes en otras personas o cosas.", 1),
+            Pair("He perdido casi todo el interés en otras personas o cosas.", 2),
+            Pair("Me es difícil interesarme por algo. ", 3),
+            Pair("Tomo mis propias decisiones tan bien como siempre.", 0),
+            Pair("Me resulta más difícil que de costumbre tomar decisiones", 1),
+            Pair("Encuentro mucha más dificultad que antes para tomar decisiones.", 2),
+            Pair("Tengo problemas para tomar cualquier decisión.", 3),
+            Pair("No siento que yo no sea valioso", 0),
+            Pair("No me considero a mi mismo tan valioso y útil como solía considerarme", 1),
+            Pair("Me siento menos valioso cuando me comparo con otros.", 2),
+            Pair("Siento que no valgo nada.", 3),
+            Pair("Tengo tanta energía como siempre.", 0),
+            Pair("Tengo menos energía que la que solía tener.", 1),
+            Pair("No tengo suficiente energía para hacer demasiado", 2),
+            Pair("No tengo energía suficiente para hacer nada.", 3),
+            Pair("No he experimentado ningún cambio en mis hábitos de sueño.", 0),
+            Pair("Duermo un poco más que lo habitual.", 1),
+            Pair("Duermo un poco menos que lo habitual.", 1),
+            Pair("Duermo mucho más que lo habitual.", 2),
+            Pair("Duermo mucho menos que lo habitual", 2),
+            Pair("Duermo la mayor parte del día", 3),
+            Pair("Me despierto 1-2 horas más temprano y no puedo volver a dormirme", 3),
+            Pair("No estoy tan irritable que lo habitual.", 0),
+            Pair("Estoy más irritable que lo habitual.", 1),
+            Pair("Estoy mucho más irritable que lo habitual.", 2),
+            Pair("Estoy irritable todo el tiempo.", 3),
+            Pair("No he experimentado ningún cambio en mi apetito.", 0),
+            Pair("Mi apetito es un poco menor que lo habitual.", 1),
+            Pair("Mi apetito es un poco mayor que lo habitual.", 1),
+            Pair("Mi apetito es mucho menor que antes.", 2),
+            Pair("Mi apetito es mucho mayor que lo habitual", 2),
+            Pair("No tengo apetito en absoluto.", 3),
+            Pair("Quiero comer todo el día.",3),
+            Pair("Puedo concentrarme tan bien como siempre.", 0),
+            Pair("No puedo concentrarme tan bien como habitualmente", 1),
+            Pair("Me es difícil mantener la mente en algo por mucho tiempo.", 2),
+            Pair("Encuentro que no puedo concentrarme en nada.", 3),
+            Pair("No estoy más cansado o fatigado que lo habitual.", 0),
+            Pair("Me fatigo o me canso más fácilmente que lo habitual.", 1),
+            Pair(
+                "Estoy demasiado fatigado o cansado para hacer muchas de las cosas que solía hacer.",
+                2
+            ),
+            Pair(
+                "Estoy demasiado fatigado o cansado para hacer la mayoría de las cosas que solía",
+                3
+            ),
+            Pair("No he notado ningún cambio reciente en mi interés por el sexo.", 0),
+            Pair("Estoy menos interesado en el sexo de lo que solía estarlo.", 1),
+            Pair("Estoy mucho menos interesado en el sexo.", 2),
+            Pair("He perdido completamente el interés en el sexo. ", 3)
+        )
+    }
 }
+
