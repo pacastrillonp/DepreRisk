@@ -11,7 +11,6 @@ import com.example.deprerisk.persistence.QuestionRepository
 import com.example.deprerisk.persistence.room.BeckInventoryDataBase
 import com.example.deprerisk.persistence.room.entity.BeckInventoryEntity
 import com.example.deprerisk.persistence.room.entity.QuestionnaireAnswersEntity
-import com.google.gson.Gson
 
 
 class DepressionRiskViewModel(application: Application) : AndroidViewModel(application) {
@@ -54,7 +53,6 @@ class DepressionRiskViewModel(application: Application) : AndroidViewModel(appli
             }
         }
 
-//        val message = Gson().toJson(answers)
         Log.d("answer total score","$score")
         SendDataService().execute(score.toString())
     }
