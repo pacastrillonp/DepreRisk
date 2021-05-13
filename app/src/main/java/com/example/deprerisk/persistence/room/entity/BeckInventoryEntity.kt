@@ -1,14 +1,14 @@
-package com.example.deprerisk.persistence.room
+package com.example.deprerisk.persistence.room.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.deprerisk.persistence.room.BeckInventoryEntity.Companion.TABLE_NAME
+import com.example.deprerisk.persistence.room.entity.BeckInventoryEntity.Companion.TABLE_NAME
 import org.jetbrains.annotations.NotNull
 
 @Entity(tableName = TABLE_NAME)
 data class BeckInventoryEntity(
-
+    @PrimaryKey @NotNull @ColumnInfo(name = "id") var id: Int,
     @ColumnInfo(name = "question") var question: String,
     @ColumnInfo(name = "answerOne") var answerOne: String,
     @ColumnInfo(name = "answerTwo") var answerTwo: String,
@@ -19,10 +19,6 @@ data class BeckInventoryEntity(
     @ColumnInfo(name = "answerSeven") var answerSeven: String
 
 ) {
-    @PrimaryKey(autoGenerate = true)
-    @NotNull
-    var id: Long = 0
-
     companion object {
         const val TABLE_NAME = "beck_inventory_table"
 

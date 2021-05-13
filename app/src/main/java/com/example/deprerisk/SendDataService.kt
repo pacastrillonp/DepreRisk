@@ -21,7 +21,7 @@ class SendDataService : AsyncTask<String, Unit, Unit>() {
     }
 
     companion object {
-        const val SERVER_ADDRESS = "192.168.1.59"
+        const val SERVER_ADDRESS = "172.32.38.169"
         const val PORT = 4000
     }
 }
